@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Reach Out to Us</h1>
+    <p>We’d love to hear your thoughts. Send us a quick message below.</p>
+
+    <form id="contactForm" novalidate>
+      <div class="input-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" autocomplete="name">
+        <span class="error-message" id="fullNameError"></span>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" autocomplete="email">
+        <span class="error-message" id="emailError"></span>
+      </div>
+
+      <div class="input-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" autocomplete="off">
+        <span class="error-message" id="subjectError"></span>
+      </div>
+
+      <!-- ✅ Added missing message textarea -->
+      <div class="input-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message here"></textarea>
+        <span class="error-message" id="messageError"></span>
+      </div>
+
+      <button type="submit">Submit</button>
+      <div class="success-message" id="successMessage">✅ Your message has been sent successfully!</div>
+    </form>
+  </div>
+
+  <script src="contact.js"></script>
+</body>
+</html>
